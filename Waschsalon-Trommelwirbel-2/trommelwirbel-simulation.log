@@ -1,0 +1,824 @@
+2025-06-27 17:47:39.185 [main] INFO  c.t.LaundrySimulationMain - Welcome to Trommelwirbel Laundromat Simulation!
+2025-06-27 17:47:39.188 [main] INFO  c.t.LaundrySimulationMain - This simulation will test different ExecutorService implementations
+2025-06-27 17:47:39.188 [main] INFO  c.t.LaundrySimulationMain - with 40 customers, 3 washing machines, and concurrent processing.
+2025-06-27 17:47:39.189 [main] INFO  c.t.service.LaundryService - Trommelwirbel Laundromat initialized with 3 washing machines
+2025-06-27 17:47:39.190 [main] INFO  c.t.service.LaundryService - Starting Trommelwirbel Laundromat Simulation
+2025-06-27 17:47:39.191 [main] INFO  c.t.service.LaundryService - 
+=== Testing with FixedThreadPool ===
+2025-06-27 17:47:39.194 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine Aqua-Matic 3000 started processing
+2025-06-27 17:47:39.194 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine Super Wash Pro started processing
+2025-06-27 17:47:39.194 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine EcoClean Deluxe started processing
+2025-06-27 17:47:46.201 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K1 arrived with 5 loads. Queue size: 1
+2025-06-27 17:47:46.201 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine EcoClean Deluxe started washing for customer K1 (load 1/5)
+2025-06-27 17:47:52.203 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine EcoClean Deluxe finished washing for customer K1 (remaining loads: 4)
+2025-06-27 17:47:52.203 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine EcoClean Deluxe started washing for customer K1 (load 2/5)
+2025-06-27 17:47:53.206 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K2 arrived with 3 loads. Queue size: 1
+2025-06-27 17:47:53.207 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine Aqua-Matic 3000 started washing for customer K2 (load 1/3)
+2025-06-27 17:47:58.211 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K3 arrived with 1 loads. Queue size: 1
+2025-06-27 17:47:58.212 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine Super Wash Pro started washing for customer K3 (load 1/1)
+2025-06-27 17:48:01.217 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K4 arrived with 5 loads. Queue size: 1
+2025-06-27 17:48:02.206 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine EcoClean Deluxe finished washing for customer K1 (remaining loads: 3)
+2025-06-27 17:48:02.206 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine EcoClean Deluxe started washing for customer K4 (load 1/5)
+2025-06-27 17:48:02.209 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine Aqua-Matic 3000 finished washing for customer K2 (remaining loads: 2)
+2025-06-27 17:48:02.209 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine Aqua-Matic 3000 started washing for customer K1 (load 3/5)
+2025-06-27 17:48:07.214 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine Super Wash Pro finished washing for customer K3 (remaining loads: 0)
+2025-06-27 17:48:07.214 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K3 completed all 1 loads
+2025-06-27 17:48:07.215 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine Super Wash Pro started washing for customer K2 (load 2/3)
+2025-06-27 17:48:07.220 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K5 arrived with 5 loads. Queue size: 1
+2025-06-27 17:48:08.215 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine Aqua-Matic 3000 finished washing for customer K1 (remaining loads: 2)
+2025-06-27 17:48:08.216 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine Aqua-Matic 3000 started washing for customer K5 (load 1/5)
+2025-06-27 17:48:08.225 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K6 arrived with 2 loads. Queue size: 2
+2025-06-27 17:48:11.231 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K7 arrived with 3 loads. Queue size: 3
+2025-06-27 17:48:12.211 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine EcoClean Deluxe finished washing for customer K4 (remaining loads: 4)
+2025-06-27 17:48:12.212 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine EcoClean Deluxe started washing for customer K1 (load 4/5)
+2025-06-27 17:48:12.237 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K8 arrived with 4 loads. Queue size: 4
+2025-06-27 17:48:14.243 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K9 arrived with 2 loads. Queue size: 5
+2025-06-27 17:48:17.248 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K10 arrived with 5 loads. Queue size: 6
+2025-06-27 17:48:19.254 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K11 arrived with 1 loads. Queue size: 7
+2025-06-27 17:48:20.220 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine Super Wash Pro finished washing for customer K2 (remaining loads: 1)
+2025-06-27 17:48:20.221 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine Super Wash Pro started washing for customer K6 (load 1/2)
+2025-06-27 17:48:20.259 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K12 arrived with 4 loads. Queue size: 8
+2025-06-27 17:48:21.220 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine Aqua-Matic 3000 finished washing for customer K5 (remaining loads: 4)
+2025-06-27 17:48:21.221 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine Aqua-Matic 3000 started washing for customer K7 (load 1/3)
+2025-06-27 17:48:24.265 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K13 arrived with 1 loads. Queue size: 9
+2025-06-27 17:48:25.217 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine EcoClean Deluxe finished washing for customer K1 (remaining loads: 1)
+2025-06-27 17:48:25.218 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine EcoClean Deluxe started washing for customer K4 (load 2/5)
+2025-06-27 17:48:27.225 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine Aqua-Matic 3000 finished washing for customer K7 (remaining loads: 2)
+2025-06-27 17:48:27.227 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine Aqua-Matic 3000 started washing for customer K8 (load 1/4)
+2025-06-27 17:48:27.270 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K14 arrived with 4 loads. Queue size: 10
+2025-06-27 17:48:28.276 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K15 arrived with 3 loads. Queue size: 11
+2025-06-27 17:48:30.278 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K16 arrived with 1 loads. Queue size: 12
+2025-06-27 17:48:32.223 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine Super Wash Pro finished washing for customer K6 (remaining loads: 1)
+2025-06-27 17:48:32.224 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine Super Wash Pro started washing for customer K9 (load 1/2)
+2025-06-27 18:52:30.605 [main] INFO  c.t.LaundrySimulationMain - Welcome to Trommelwirbel Laundromat Simulation!
+2025-06-27 18:52:30.607 [main] INFO  c.t.LaundrySimulationMain - This simulation will test different ExecutorService implementations
+2025-06-27 18:52:30.607 [main] INFO  c.t.LaundrySimulationMain - with 40 customers, 3 washing machines, and concurrent processing.
+2025-06-27 18:52:30.609 [main] INFO  c.t.service.LaundryService - Trommelwirbel Laundromat initialized with 3 washing machines
+2025-06-27 18:52:30.609 [main] INFO  c.t.service.LaundryService - Starting Trommelwirbel Laundromat Simulation
+2025-06-27 18:52:30.610 [main] INFO  c.t.service.LaundryService - 
+=== Testing with FixedThreadPool ===
+2025-06-27 18:52:30.612 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started processing
+2025-06-27 18:52:30.612 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started processing
+2025-06-27 18:52:30.612 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started processing
+2025-06-27 18:52:34.620 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K1 arrived with 5 loads. Queue size: 1
+2025-06-27 18:52:34.620 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K1 (load 1/5)
+2025-06-27 18:52:38.621 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K2 arrived with 3 loads. Queue size: 1
+2025-06-27 18:52:38.621 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K2 (load 1/3)
+2025-06-27 18:52:39.625 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K1 (remaining loads: 4)
+2025-06-27 18:52:39.627 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K1 (load 2/5)
+2025-06-27 18:52:42.627 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K3 arrived with 3 loads. Queue size: 1
+2025-06-27 18:52:42.628 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K3 (load 1/3)
+2025-06-27 18:52:44.633 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K4 arrived with 5 loads. Queue size: 1
+2025-06-27 18:52:45.630 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K1 (remaining loads: 3)
+2025-06-27 18:52:45.631 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K4 (load 1/5)
+2025-06-27 18:52:48.627 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K2 (remaining loads: 2)
+2025-06-27 18:52:48.628 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K1 (load 3/5)
+2025-06-27 18:52:50.637 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K5 arrived with 4 loads. Queue size: 2
+2025-06-27 18:52:55.633 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K1 (remaining loads: 2)
+2025-06-27 18:52:55.633 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K2 (load 2/3)
+2025-06-27 18:52:57.633 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K3 (remaining loads: 2)
+2025-06-27 18:52:57.635 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K5 (load 1/4)
+2025-06-27 18:52:57.642 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K6 arrived with 2 loads. Queue size: 3
+2025-06-27 18:52:59.634 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K4 (remaining loads: 4)
+2025-06-27 18:52:59.635 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K1 (load 4/5)
+2025-06-27 18:53:01.638 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K2 (remaining loads: 1)
+2025-06-27 18:53:01.639 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K3 (load 2/3)
+2025-06-27 18:53:01.647 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K7 arrived with 5 loads. Queue size: 4
+2025-06-27 18:53:05.652 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K8 arrived with 5 loads. Queue size: 5
+2025-06-27 18:53:06.640 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K5 (remaining loads: 3)
+2025-06-27 18:53:06.641 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K6 (load 1/2)
+2025-06-27 18:53:07.641 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K1 (remaining loads: 1)
+2025-06-27 18:53:07.642 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K4 (load 2/5)
+2025-06-27 18:53:11.646 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K6 (remaining loads: 1)
+2025-06-27 18:53:11.646 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K2 (load 3/3)
+2025-06-27 18:53:12.644 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K3 (remaining loads: 1)
+2025-06-27 18:53:12.645 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K7 (load 1/5)
+2025-06-27 18:53:12.647 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K4 (remaining loads: 3)
+2025-06-27 18:53:12.647 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K8 (load 1/5)
+2025-06-27 18:53:12.655 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K9 arrived with 1 loads. Queue size: 6
+2025-06-27 18:53:15.660 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K10 arrived with 2 loads. Queue size: 7
+2025-06-27 18:53:17.650 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K7 (remaining loads: 4)
+2025-06-27 18:53:17.651 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K5 (load 2/4)
+2025-06-27 18:53:18.653 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K8 (remaining loads: 4)
+2025-06-27 18:53:18.653 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K1 (load 5/5)
+2025-06-27 18:53:20.651 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K2 (remaining loads: 0)
+2025-06-27 18:53:20.653 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K2 completed all 3 loads
+2025-06-27 18:53:20.653 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K6 (load 2/2)
+2025-06-27 18:53:20.665 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K11 arrived with 4 loads. Queue size: 7
+2025-06-27 18:53:22.670 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K12 arrived with 2 loads. Queue size: 8
+2025-06-27 18:53:24.656 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K5 (remaining loads: 2)
+2025-06-27 18:53:24.656 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K3 (load 3/3)
+2025-06-27 18:53:24.654 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K1 (remaining loads: 0)
+2025-06-27 18:53:24.815 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K1 completed all 5 loads
+2025-06-27 18:53:24.816 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K4 (load 3/5)
+2025-06-27 18:53:26.675 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K13 arrived with 3 loads. Queue size: 8
+2025-06-27 18:53:31.680 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K14 arrived with 3 loads. Queue size: 9
+2025-06-27 18:53:32.687 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K15 arrived with 5 loads. Queue size: 10
+2025-06-27 18:53:32.822 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K4 (remaining loads: 2)
+2025-06-27 18:53:32.823 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K9 (load 1/1)
+2025-06-27 18:53:33.657 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K3 (remaining loads: 0)
+2025-06-27 18:53:33.658 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K3 completed all 3 loads
+2025-06-27 18:53:33.658 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K10 (load 1/2)
+2025-06-27 18:53:35.657 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K6 (remaining loads: 0)
+2025-06-27 18:53:35.658 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K6 completed all 2 loads
+2025-06-27 18:53:35.658 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K7 (load 2/5)
+2025-06-27 18:53:35.692 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K16 arrived with 1 loads. Queue size: 9
+2025-06-27 18:53:39.697 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K17 arrived with 1 loads. Queue size: 10
+2025-06-27 18:53:44.660 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K10 (remaining loads: 1)
+2025-06-27 18:53:44.663 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K8 (load 2/5)
+2025-06-27 18:53:47.700 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K18 arrived with 2 loads. Queue size: 11
+2025-06-27 18:53:47.828 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K9 (remaining loads: 0)
+2025-06-27 18:53:47.829 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K9 completed all 1 loads
+2025-06-27 18:53:47.829 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K11 (load 1/4)
+2025-06-27 18:53:50.663 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K7 (remaining loads: 3)
+2025-06-27 18:53:50.663 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K12 (load 1/2)
+2025-06-27 18:53:52.667 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K8 (remaining loads: 3)
+2025-06-27 18:53:52.667 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K5 (load 3/4)
+2025-06-27 18:53:54.701 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K19 arrived with 4 loads. Queue size: 11
+2025-06-27 18:53:57.704 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K20 arrived with 2 loads. Queue size: 12
+2025-06-27 18:53:57.834 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K11 (remaining loads: 3)
+2025-06-27 18:53:57.835 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K13 (load 1/3)
+2025-06-27 18:53:59.668 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K12 (remaining loads: 1)
+2025-06-27 18:53:59.669 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K14 (load 1/3)
+2025-06-27 18:54:00.711 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K21 arrived with 2 loads. Queue size: 13
+2025-06-27 18:54:05.670 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K5 (remaining loads: 1)
+2025-06-27 18:54:05.670 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K15 (load 1/5)
+2025-06-27 18:54:06.674 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K14 (remaining loads: 2)
+2025-06-27 18:54:06.675 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K4 (load 4/5)
+2025-06-27 18:54:08.715 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K22 arrived with 3 loads. Queue size: 14
+2025-06-27 18:54:08.838 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K13 (remaining loads: 2)
+2025-06-27 18:54:08.839 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K16 (load 1/1)
+2025-06-27 18:54:11.680 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K4 (remaining loads: 1)
+2025-06-27 18:54:11.680 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K17 (load 1/1)
+2025-06-27 18:54:12.717 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K23 arrived with 4 loads. Queue size: 15
+2025-06-27 18:54:13.719 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K24 arrived with 4 loads. Queue size: 16
+2025-06-27 18:54:15.675 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K15 (remaining loads: 4)
+2025-06-27 18:54:15.676 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K10 (load 2/2)
+2025-06-27 18:54:17.685 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K17 (remaining loads: 0)
+2025-06-27 18:54:17.687 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K17 completed all 1 loads
+2025-06-27 18:54:17.687 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K18 (load 1/2)
+2025-06-27 18:54:18.724 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K25 arrived with 2 loads. Queue size: 16
+2025-06-27 18:54:22.677 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K10 (remaining loads: 0)
+2025-06-27 18:54:22.678 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K10 completed all 2 loads
+2025-06-27 18:54:22.678 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K7 (load 3/5)
+2025-06-27 18:54:22.725 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K26 arrived with 1 loads. Queue size: 16
+2025-06-27 18:54:23.844 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K16 (remaining loads: 0)
+2025-06-27 18:54:23.845 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K16 completed all 1 loads
+2025-06-27 18:54:23.845 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K8 (load 3/5)
+2025-06-27 18:54:24.691 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K18 (remaining loads: 1)
+2025-06-27 18:54:24.692 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K19 (load 1/4)
+2025-06-27 18:54:30.731 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K27 arrived with 2 loads. Queue size: 16
+2025-06-27 18:54:32.849 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K8 (remaining loads: 2)
+2025-06-27 18:54:32.849 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K20 (load 1/2)
+2025-06-27 18:54:33.693 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K19 (remaining loads: 3)
+2025-06-27 18:54:33.694 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K11 (load 2/4)
+2025-06-27 18:54:37.683 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K7 (remaining loads: 2)
+2025-06-27 18:54:37.684 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K12 (load 2/2)
+2025-06-27 18:54:37.850 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K20 (remaining loads: 1)
+2025-06-27 18:54:37.851 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K21 (load 1/2)
+2025-06-27 18:54:38.737 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K28 arrived with 3 loads. Queue size: 17
+2025-06-27 18:54:40.740 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K29 arrived with 2 loads. Queue size: 18
+2025-06-27 18:54:45.698 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K11 (remaining loads: 2)
+2025-06-27 18:54:45.699 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K5 (load 4/4)
+2025-06-27 18:54:46.686 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K12 (remaining loads: 0)
+2025-06-27 18:54:46.687 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K12 completed all 2 loads
+2025-06-27 18:54:46.687 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K14 (load 2/3)
+2025-06-27 18:54:47.851 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K21 (remaining loads: 1)
+2025-06-27 18:54:47.852 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K22 (load 1/3)
+2025-06-27 18:54:48.747 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K30 arrived with 1 loads. Queue size: 18
+2025-06-27 18:54:51.752 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K31 arrived with 2 loads. Queue size: 19
+2025-06-27 18:54:52.702 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K5 (remaining loads: 0)
+2025-06-27 18:54:52.703 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K5 completed all 4 loads
+2025-06-27 18:54:52.703 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K13 (load 2/3)
+2025-06-27 18:54:52.855 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K22 (remaining loads: 2)
+2025-06-27 18:54:52.855 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K4 (load 5/5)
+2025-06-27 18:54:59.689 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K14 (remaining loads: 1)
+2025-06-27 18:54:59.689 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K23 (load 1/4)
+2025-06-27 18:54:59.704 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K13 (remaining loads: 1)
+2025-06-27 18:54:59.705 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K24 (load 1/4)
+2025-06-27 18:54:59.757 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K32 arrived with 4 loads. Queue size: 19
+2025-06-27 18:55:02.859 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K4 (remaining loads: 0)
+2025-06-27 18:55:02.860 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K4 completed all 5 loads
+2025-06-27 18:55:02.860 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K15 (load 2/5)
+2025-06-27 18:55:06.694 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K23 (remaining loads: 3)
+2025-06-27 18:55:06.694 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K25 (load 1/2)
+2025-06-27 18:55:06.762 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K33 arrived with 4 loads. Queue size: 19
+2025-06-27 18:55:07.710 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K24 (remaining loads: 3)
+2025-06-27 18:55:07.710 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K26 (load 1/1)
+2025-06-27 18:55:07.768 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K34 arrived with 3 loads. Queue size: 20
+2025-06-27 18:55:08.770 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K35 arrived with 2 loads. Queue size: 21
+2025-06-27 18:55:13.862 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K15 (remaining loads: 3)
+2025-06-27 18:55:13.864 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K18 (load 2/2)
+2025-06-27 18:55:16.772 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K36 arrived with 1 loads. Queue size: 22
+2025-06-27 18:55:18.778 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K37 arrived with 2 loads. Queue size: 23
+2025-06-27 18:55:19.698 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K25 (remaining loads: 1)
+2025-06-27 18:55:19.698 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K27 (load 1/2)
+2025-06-27 18:55:21.716 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K26 (remaining loads: 0)
+2025-06-27 18:55:21.716 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K26 completed all 1 loads
+2025-06-27 18:55:21.716 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K8 (load 4/5)
+2025-06-27 18:55:23.779 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K38 arrived with 2 loads. Queue size: 23
+2025-06-27 18:55:24.781 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K39 arrived with 1 loads. Queue size: 24
+2025-06-27 18:55:26.867 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K18 (remaining loads: 0)
+2025-06-27 18:55:26.868 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K18 completed all 2 loads
+2025-06-27 18:55:26.868 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K19 (load 2/4)
+2025-06-27 18:55:27.721 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K8 (remaining loads: 1)
+2025-06-27 18:55:27.721 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K7 (load 4/5)
+2025-06-27 18:55:30.703 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K27 (remaining loads: 1)
+2025-06-27 18:55:30.704 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K20 (load 2/2)
+2025-06-27 18:55:31.785 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K40 arrived with 4 loads. Queue size: 24
+2025-06-27 18:55:31.786 [pool-1-thread-1] INFO  c.t.service.LaundryService - All 40 customers have arrived
+2025-06-27 18:55:33.873 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K19 (remaining loads: 2)
+2025-06-27 18:55:33.875 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K28 (load 1/3)
+2025-06-27 18:55:37.709 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K20 (remaining loads: 0)
+2025-06-27 18:55:37.710 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K20 completed all 2 loads
+2025-06-27 18:55:37.711 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K29 (load 1/2)
+2025-06-27 18:55:40.726 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K7 (remaining loads: 1)
+2025-06-27 18:55:40.726 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K11 (load 3/4)
+2025-06-27 18:55:40.877 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K28 (remaining loads: 2)
+2025-06-27 18:55:40.878 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K21 (load 2/2)
+2025-06-27 18:55:48.883 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K21 (remaining loads: 0)
+2025-06-27 18:55:48.883 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K21 completed all 2 loads
+2025-06-27 18:55:48.884 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K30 (load 1/1)
+2025-06-27 18:55:51.715 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K29 (remaining loads: 1)
+2025-06-27 18:55:51.715 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K31 (load 1/2)
+2025-06-27 18:55:55.731 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K11 (remaining loads: 1)
+2025-06-27 18:55:55.731 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K22 (load 2/3)
+2025-06-27 18:55:55.889 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K30 (remaining loads: 0)
+2025-06-27 18:55:55.889 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K30 completed all 1 loads
+2025-06-27 18:55:55.889 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K14 (load 3/3)
+2025-06-27 18:56:03.720 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K31 (remaining loads: 1)
+2025-06-27 18:56:03.721 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K13 (load 3/3)
+2025-06-27 18:56:05.736 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K22 (remaining loads: 1)
+2025-06-27 18:56:05.737 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K32 (load 1/4)
+2025-06-27 18:56:08.894 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K14 (remaining loads: 0)
+2025-06-27 18:56:08.895 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K14 completed all 3 loads
+2025-06-27 18:56:08.895 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K23 (load 2/4)
+2025-06-27 18:56:10.726 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K13 (remaining loads: 0)
+2025-06-27 18:56:10.727 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K13 completed all 3 loads
+2025-06-27 18:56:10.727 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K33 (load 1/4)
+2025-06-27 18:56:12.739 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K32 (remaining loads: 3)
+2025-06-27 18:56:12.740 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K24 (load 2/4)
+2025-06-27 18:56:15.900 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K23 (remaining loads: 2)
+2025-06-27 18:56:15.901 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K34 (load 1/3)
+2025-06-27 18:56:17.745 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K24 (remaining loads: 2)
+2025-06-27 18:56:17.746 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K35 (load 1/2)
+2025-06-27 18:56:20.904 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K34 (remaining loads: 2)
+2025-06-27 18:56:20.904 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K15 (load 3/5)
+2025-06-27 18:56:23.730 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K33 (remaining loads: 3)
+2025-06-27 18:56:23.730 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K36 (load 1/1)
+2025-06-27 18:56:29.735 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K36 (remaining loads: 0)
+2025-06-27 18:56:29.736 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K36 completed all 1 loads
+2025-06-27 18:56:29.736 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K37 (load 1/2)
+2025-06-27 18:56:29.749 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K35 (remaining loads: 1)
+2025-06-27 18:56:29.750 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K25 (load 2/2)
+2025-06-27 18:56:33.909 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K15 (remaining loads: 2)
+2025-06-27 18:56:33.910 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K38 (load 1/2)
+2025-06-27 18:56:35.754 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K25 (remaining loads: 0)
+2025-06-27 18:56:35.754 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K25 completed all 2 loads
+2025-06-27 18:56:35.754 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K39 (load 1/1)
+2025-06-27 18:56:40.756 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K39 (remaining loads: 0)
+2025-06-27 18:56:40.757 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K39 completed all 1 loads
+2025-06-27 18:56:40.757 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K8 (load 5/5)
+2025-06-27 18:56:40.913 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K38 (remaining loads: 1)
+2025-06-27 18:56:40.913 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K27 (load 2/2)
+2025-06-27 18:56:44.738 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K37 (remaining loads: 1)
+2025-06-27 18:56:44.739 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K40 (load 1/4)
+2025-06-27 18:56:50.918 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K27 (remaining loads: 0)
+2025-06-27 18:56:50.920 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K27 completed all 2 loads
+2025-06-27 18:56:50.920 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K19 (load 3/4)
+2025-06-27 18:56:53.762 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K8 (remaining loads: 0)
+2025-06-27 18:56:53.762 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K8 completed all 5 loads
+2025-06-27 18:56:53.762 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K7 (load 5/5)
+2025-06-27 18:56:57.741 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K40 (remaining loads: 3)
+2025-06-27 18:56:57.742 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K28 (load 2/3)
+2025-06-27 18:56:58.925 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K19 (remaining loads: 1)
+2025-06-27 18:56:58.926 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K29 (load 2/2)
+2025-06-27 18:57:04.747 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K28 (remaining loads: 1)
+2025-06-27 18:57:04.748 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K11 (load 4/4)
+2025-06-27 18:57:04.767 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K7 (remaining loads: 0)
+2025-06-27 18:57:04.768 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K7 completed all 5 loads
+2025-06-27 18:57:04.768 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K31 (load 2/2)
+2025-06-27 18:57:10.773 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K31 (remaining loads: 0)
+2025-06-27 18:57:10.774 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K31 completed all 2 loads
+2025-06-27 18:57:10.774 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K22 (load 3/3)
+2025-06-27 18:57:10.930 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K29 (remaining loads: 0)
+2025-06-27 18:57:10.930 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K29 completed all 2 loads
+2025-06-27 18:57:10.930 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K32 (load 2/4)
+2025-06-27 18:57:17.776 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K22 (remaining loads: 0)
+2025-06-27 18:57:17.778 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K22 completed all 3 loads
+2025-06-27 18:57:17.778 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K23 (load 3/4)
+2025-06-27 18:57:19.750 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K11 (remaining loads: 0)
+2025-06-27 18:57:19.750 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K11 completed all 4 loads
+2025-06-27 18:57:19.750 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K24 (load 3/4)
+2025-06-27 18:57:22.931 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K32 (remaining loads: 2)
+2025-06-27 18:57:22.931 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K34 (load 2/3)
+2025-06-27 18:57:26.755 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K24 (remaining loads: 1)
+2025-06-27 18:57:26.756 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K33 (load 2/4)
+2025-06-27 18:57:32.783 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K23 (remaining loads: 1)
+2025-06-27 18:57:32.784 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K35 (load 2/2)
+2025-06-27 18:57:37.761 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K33 (remaining loads: 2)
+2025-06-27 18:57:37.762 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K15 (load 4/5)
+2025-06-27 18:57:37.932 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K34 (remaining loads: 1)
+2025-06-27 18:57:37.933 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K38 (load 2/2)
+2025-06-27 18:57:41.786 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K35 (remaining loads: 0)
+2025-06-27 18:57:41.786 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K35 completed all 2 loads
+2025-06-27 18:57:41.786 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K37 (load 2/2)
+2025-06-27 18:57:43.763 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K15 (remaining loads: 1)
+2025-06-27 18:57:43.764 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K40 (load 2/4)
+2025-06-27 18:57:50.764 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K40 (remaining loads: 2)
+2025-06-27 18:57:50.765 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K19 (load 4/4)
+2025-06-27 18:57:51.937 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K38 (remaining loads: 0)
+2025-06-27 18:57:51.937 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K38 completed all 2 loads
+2025-06-27 18:57:51.937 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K28 (load 3/3)
+2025-06-27 18:57:52.791 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K37 (remaining loads: 0)
+2025-06-27 18:57:52.793 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K37 completed all 2 loads
+2025-06-27 18:57:52.793 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K32 (load 3/4)
+2025-06-27 18:57:57.767 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K19 (remaining loads: 0)
+2025-06-27 18:57:57.767 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K19 completed all 4 loads
+2025-06-27 18:57:57.768 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K24 (load 4/4)
+2025-06-27 18:58:02.796 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K32 (remaining loads: 1)
+2025-06-27 18:58:02.797 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K23 (load 4/4)
+2025-06-27 18:58:06.942 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K28 (remaining loads: 0)
+2025-06-27 18:58:06.943 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K28 completed all 3 loads
+2025-06-27 18:58:06.943 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K33 (load 3/4)
+2025-06-27 18:58:11.948 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K33 (remaining loads: 1)
+2025-06-27 18:58:11.949 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K34 (load 3/3)
+2025-06-27 18:58:12.772 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K24 (remaining loads: 0)
+2025-06-27 18:58:12.773 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K24 completed all 4 loads
+2025-06-27 18:58:12.773 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K15 (load 5/5)
+2025-06-27 18:58:17.802 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K23 (remaining loads: 0)
+2025-06-27 18:58:17.802 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K23 completed all 4 loads
+2025-06-27 18:58:17.802 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K40 (load 3/4)
+2025-06-27 18:58:17.952 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K34 (remaining loads: 0)
+2025-06-27 18:58:17.952 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K34 completed all 3 loads
+2025-06-27 18:58:17.952 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K32 (load 4/4)
+2025-06-27 18:58:21.775 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K15 (remaining loads: 0)
+2025-06-27 18:58:21.775 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K15 completed all 5 loads
+2025-06-27 18:58:21.775 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K33 (load 4/4)
+2025-06-27 18:58:22.957 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K32 (remaining loads: 0)
+2025-06-27 18:58:22.958 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K32 completed all 4 loads
+2025-06-27 18:58:23.807 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K40 (remaining loads: 1)
+2025-06-27 18:58:23.808 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K40 (load 4/4)
+2025-06-27 18:58:26.777 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K33 (remaining loads: 0)
+2025-06-27 18:58:26.777 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K33 completed all 4 loads
+2025-06-27 18:58:30.813 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K40 (remaining loads: 0)
+2025-06-27 18:58:30.813 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K40 completed all 4 loads
+2025-06-27 18:58:30.815 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished processing
+2025-06-27 18:58:30.832 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished processing
+2025-06-27 18:58:31.792 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished processing
+2025-06-27 18:58:31.797 [main] INFO  c.t.service.LaundryService - 
+=== SIMULATION STATISTICS for FixedThreadPool ===
+2025-06-27 18:58:31.797 [main] INFO  c.t.service.LaundryService - Total simulation time: 361 seconds
+2025-06-27 18:58:31.797 [main] INFO  c.t.service.LaundryService - Total customers served: 40
+2025-06-27 18:58:31.797 [main] INFO  c.t.service.LaundryService - Average wait time: {:.2f} seconds
+2025-06-27 18:58:31.797 [main] INFO  c.t.service.LaundryService - Average wash time: {:.2f} seconds
+2025-06-27 18:58:31.797 [main] INFO  c.t.service.LaundryService - Total washes completed: 111
+2025-06-27 18:58:31.797 [main] INFO  c.t.service.LaundryService - Machine utilization:
+2025-06-27 18:58:31.798 [main] INFO  c.t.service.LaundryService -   1: {:.2f}%
+2025-06-27 18:58:31.798 [main] INFO  c.t.service.LaundryService -   2: {:.2f}%
+2025-06-27 18:58:31.798 [main] INFO  c.t.service.LaundryService -   3: {:.2f}%
+2025-06-27 18:58:31.798 [main] INFO  c.t.service.LaundryService - === END STATISTICS ===
+
+2025-06-27 18:58:31.799 [main] INFO  c.t.service.LaundryService - 
+=== Testing with CachedThreadPool ===
+2025-06-27 18:58:31.799 [pool-2-thread-2] INFO  c.t.service.LaundryService - Machine 1 started processing
+2025-06-27 18:58:31.799 [pool-2-thread-3] INFO  c.t.service.LaundryService - Machine 2 started processing
+2025-06-27 18:58:31.799 [pool-2-thread-4] INFO  c.t.service.LaundryService - Machine 3 started processing
+2025-06-27 18:58:38.804 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K1 arrived with 2 loads. Queue size: 1
+2025-06-27 18:58:43.810 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K2 arrived with 1 loads. Queue size: 1
+2025-06-27 18:58:49.812 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K3 arrived with 3 loads. Queue size: 1
+2025-06-27 18:58:51.812 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K4 arrived with 4 loads. Queue size: 1
+2025-06-27 18:58:59.818 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K5 arrived with 3 loads. Queue size: 2
+2025-06-27 18:59:07.819 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K6 arrived with 5 loads. Queue size: 3
+2025-06-27 18:59:10.825 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K7 arrived with 5 loads. Queue size: 4
+2025-06-27 18:59:11.826 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K8 arrived with 3 loads. Queue size: 5
+2025-06-27 18:59:12.831 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K9 arrived with 2 loads. Queue size: 6
+2025-06-27 18:59:19.837 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K10 arrived with 2 loads. Queue size: 7
+2025-06-27 18:59:21.840 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K11 arrived with 4 loads. Queue size: 8
+2025-06-27 18:59:26.841 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K12 arrived with 4 loads. Queue size: 9
+2025-06-27 18:59:30.846 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K13 arrived with 4 loads. Queue size: 10
+2025-06-27 18:59:38.851 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K14 arrived with 3 loads. Queue size: 11
+2025-06-27 18:59:46.856 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K15 arrived with 1 loads. Queue size: 12
+2025-06-27 18:59:49.862 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K16 arrived with 5 loads. Queue size: 13
+2025-06-27 18:59:51.868 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K17 arrived with 2 loads. Queue size: 14
+2025-06-27 18:59:52.871 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K18 arrived with 5 loads. Queue size: 15
+2025-06-27 18:59:53.876 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K19 arrived with 5 loads. Queue size: 16
+2025-06-27 18:59:56.882 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K20 arrived with 5 loads. Queue size: 17
+2025-06-27 18:59:59.887 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K21 arrived with 2 loads. Queue size: 18
+2025-06-27 19:00:02.890 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K22 arrived with 1 loads. Queue size: 19
+2025-06-27 19:00:06.895 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K23 arrived with 3 loads. Queue size: 20
+2025-06-27 19:00:12.900 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K24 arrived with 5 loads. Queue size: 21
+2025-06-27 19:00:13.906 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K25 arrived with 5 loads. Queue size: 22
+2025-06-27 19:00:20.911 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K26 arrived with 5 loads. Queue size: 23
+2025-06-27 19:00:25.915 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K27 arrived with 5 loads. Queue size: 24
+2025-06-27 19:00:29.918 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K28 arrived with 4 loads. Queue size: 25
+2025-06-27 19:00:36.923 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K29 arrived with 3 loads. Queue size: 26
+2025-06-27 19:00:39.929 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K30 arrived with 3 loads. Queue size: 27
+2025-06-27 19:00:41.933 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K31 arrived with 1 loads. Queue size: 28
+2025-06-27 19:00:48.934 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K32 arrived with 4 loads. Queue size: 29
+2025-06-27 19:00:49.938 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K33 arrived with 2 loads. Queue size: 30
+2025-06-27 19:00:51.943 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K34 arrived with 4 loads. Queue size: 31
+2025-06-27 19:00:54.949 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K35 arrived with 3 loads. Queue size: 32
+2025-06-27 19:00:56.950 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K36 arrived with 3 loads. Queue size: 33
+2025-06-27 19:01:02.955 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K37 arrived with 1 loads. Queue size: 34
+2025-06-27 19:01:05.961 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K38 arrived with 3 loads. Queue size: 35
+2025-06-27 19:01:09.966 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K39 arrived with 5 loads. Queue size: 36
+2025-06-27 19:01:14.970 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K40 arrived with 1 loads. Queue size: 37
+2025-06-27 19:01:14.970 [pool-2-thread-1] INFO  c.t.service.LaundryService - All 40 customers have arrived
+2025-06-27 19:47:08.101 [main] INFO  c.t.LaundrySimulationMain - Welcome to Trommelwirbel Laundromat Simulation!
+2025-06-27 19:47:08.104 [main] INFO  c.t.LaundrySimulationMain - This simulation will test different ExecutorService implementations
+2025-06-27 19:47:08.104 [main] INFO  c.t.LaundrySimulationMain - with 40 customers, 3 washing machines, and concurrent processing.
+2025-06-27 19:47:08.105 [main] INFO  c.t.service.LaundryService - Trommelwirbel Laundromat initialized with 3 washing machines
+2025-06-27 19:47:08.106 [main] INFO  c.t.service.LaundryService - Starting Trommelwirbel Laundromat Simulation
+2025-06-27 19:47:08.107 [main] INFO  c.t.service.LaundryService - 
+=== Testing with FixedThreadPool ===
+2025-06-27 19:47:08.109 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started processing
+2025-06-27 19:47:08.109 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started processing
+2025-06-27 19:47:08.109 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started processing
+2025-06-27 19:47:13.117 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K1 arrived with 2 loads. Queue size: 1
+2025-06-27 19:47:13.117 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K1 (load 1/2)
+2025-06-27 19:47:19.122 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K2 arrived with 1 loads. Queue size: 1
+2025-06-27 19:47:19.123 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K2 (load 1/1)
+2025-06-27 19:47:20.125 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K3 arrived with 1 loads. Queue size: 1
+2025-06-27 19:47:20.126 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K3 (load 1/1)
+2025-06-27 19:47:24.122 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K1 (remaining loads: 1)
+2025-06-27 19:47:24.123 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K1 (load 2/2)
+2025-06-27 19:47:27.128 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K4 arrived with 4 loads. Queue size: 1
+2025-06-27 19:47:28.133 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K5 arrived with 5 loads. Queue size: 2
+2025-06-27 19:47:30.127 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K2 (remaining loads: 0)
+2025-06-27 19:47:30.130 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K2 completed all 1 loads
+2025-06-27 19:47:30.131 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K4 (load 1/4)
+2025-06-27 19:47:35.128 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K1 (remaining loads: 0)
+2025-06-27 19:47:35.129 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K1 completed all 2 loads
+2025-06-27 19:47:35.129 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K5 (load 1/5)
+2025-06-27 19:47:35.130 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K3 (remaining loads: 0)
+2025-06-27 19:47:35.130 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K3 completed all 1 loads
+2025-06-27 19:47:36.136 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K6 arrived with 4 loads. Queue size: 1
+2025-06-27 19:47:36.136 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K6 (load 1/4)
+2025-06-27 19:47:41.133 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K4 (remaining loads: 3)
+2025-06-27 19:47:41.135 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K4 (load 2/4)
+2025-06-27 19:47:41.142 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K7 arrived with 4 loads. Queue size: 1
+2025-06-27 19:47:42.145 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K8 arrived with 4 loads. Queue size: 2
+2025-06-27 19:47:43.141 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K6 (remaining loads: 3)
+2025-06-27 19:47:43.141 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K7 (load 1/4)
+2025-06-27 19:47:47.140 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K4 (remaining loads: 2)
+2025-06-27 19:47:47.141 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K8 (load 1/4)
+2025-06-27 19:47:48.148 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K9 arrived with 4 loads. Queue size: 3
+2025-06-27 19:47:49.146 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K7 (remaining loads: 3)
+2025-06-27 19:47:49.147 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K6 (load 2/4)
+2025-06-27 19:47:50.130 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K5 (remaining loads: 4)
+2025-06-27 19:47:50.130 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K4 (load 3/4)
+2025-06-27 19:47:54.151 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K6 (remaining loads: 2)
+2025-06-27 19:47:54.152 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K9 (load 1/4)
+2025-06-27 19:47:54.153 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K10 arrived with 4 loads. Queue size: 4
+2025-06-27 19:47:55.156 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K11 arrived with 5 loads. Queue size: 5
+2025-06-27 19:47:56.158 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K12 arrived with 3 loads. Queue size: 6
+2025-06-27 19:47:58.163 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K13 arrived with 3 loads. Queue size: 7
+2025-06-27 19:47:59.144 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K8 (remaining loads: 3)
+2025-06-27 19:47:59.145 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K7 (load 2/4)
+2025-06-27 19:48:00.157 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K9 (remaining loads: 3)
+2025-06-27 19:48:00.158 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K5 (load 2/5)
+2025-06-27 19:48:00.169 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K14 arrived with 1 loads. Queue size: 8
+2025-06-27 19:48:01.174 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K15 arrived with 4 loads. Queue size: 9
+2025-06-27 19:48:02.135 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K4 (remaining loads: 1)
+2025-06-27 19:48:02.136 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K6 (load 3/4)
+2025-06-27 19:48:07.180 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K16 arrived with 1 loads. Queue size: 10
+2025-06-27 19:48:08.147 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K7 (remaining loads: 2)
+2025-06-27 19:48:08.148 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K10 (load 1/4)
+2025-06-27 19:48:08.160 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K5 (remaining loads: 3)
+2025-06-27 19:48:08.161 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K11 (load 1/5)
+2025-06-27 19:48:13.185 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K17 arrived with 5 loads. Queue size: 11
+2025-06-27 19:48:14.139 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K6 (remaining loads: 1)
+2025-06-27 19:48:14.140 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K12 (load 1/3)
+2025-06-27 19:48:14.166 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K11 (remaining loads: 4)
+2025-06-27 19:48:14.166 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K13 (load 1/3)
+2025-06-27 19:48:19.191 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K18 arrived with 3 loads. Queue size: 12
+2025-06-27 19:48:21.153 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K10 (remaining loads: 3)
+2025-06-27 19:48:21.154 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K8 (load 2/4)
+2025-06-27 19:48:23.194 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K19 arrived with 1 loads. Queue size: 13
+2025-06-27 19:48:24.143 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K12 (remaining loads: 2)
+2025-06-27 19:48:24.143 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K9 (load 2/4)
+2025-06-27 19:48:26.169 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K13 (remaining loads: 2)
+2025-06-27 19:48:26.170 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K14 (load 1/1)
+2025-06-27 19:48:27.200 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K20 arrived with 3 loads. Queue size: 14
+2025-06-27 19:48:29.155 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K8 (remaining loads: 2)
+2025-06-27 19:48:29.155 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K15 (load 1/4)
+2025-06-27 19:48:32.206 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K21 arrived with 4 loads. Queue size: 15
+2025-06-27 19:48:34.147 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K9 (remaining loads: 2)
+2025-06-27 19:48:34.148 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K4 (load 4/4)
+2025-06-27 19:48:34.173 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K14 (remaining loads: 0)
+2025-06-27 19:48:34.174 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K14 completed all 1 loads
+2025-06-27 19:48:34.174 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K16 (load 1/1)
+2025-06-27 19:48:36.160 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K15 (remaining loads: 3)
+2025-06-27 19:48:36.161 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K7 (load 3/4)
+2025-06-27 19:48:39.209 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K22 arrived with 5 loads. Queue size: 15
+2025-06-27 19:48:41.151 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K4 (remaining loads: 0)
+2025-06-27 19:48:41.153 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K4 completed all 4 loads
+2025-06-27 19:48:41.153 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K5 (load 3/5)
+2025-06-27 19:48:42.165 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K7 (remaining loads: 1)
+2025-06-27 19:48:42.166 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K17 (load 1/5)
+2025-06-27 19:48:44.210 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K23 arrived with 5 loads. Queue size: 15
+2025-06-27 19:48:46.177 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K16 (remaining loads: 0)
+2025-06-27 19:48:46.178 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K16 completed all 1 loads
+2025-06-27 19:48:46.179 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K6 (load 4/4)
+2025-06-27 19:48:47.158 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K5 (remaining loads: 2)
+2025-06-27 19:48:47.159 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K11 (load 2/5)
+2025-06-27 19:48:52.216 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K24 arrived with 2 loads. Queue size: 15
+2025-06-27 19:48:55.164 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K11 (remaining loads: 3)
+2025-06-27 19:48:55.165 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K18 (load 1/3)
+2025-06-27 19:48:56.167 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K17 (remaining loads: 4)
+2025-06-27 19:48:56.167 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K10 (load 2/4)
+2025-06-27 19:49:00.219 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K25 arrived with 4 loads. Queue size: 16
+2025-06-27 19:49:01.183 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K6 (remaining loads: 0)
+2025-06-27 19:49:01.184 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K6 completed all 4 loads
+2025-06-27 19:49:01.184 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K19 (load 1/1)
+2025-06-27 19:49:07.169 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K10 (remaining loads: 2)
+2025-06-27 19:49:07.170 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K12 (load 2/3)
+2025-06-27 19:49:07.222 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K26 arrived with 3 loads. Queue size: 16
+2025-06-27 19:49:09.170 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K18 (remaining loads: 2)
+2025-06-27 19:49:09.171 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K13 (load 2/3)
+2025-06-27 19:49:11.223 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K27 arrived with 1 loads. Queue size: 17
+2025-06-27 19:49:14.184 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K19 (remaining loads: 0)
+2025-06-27 19:49:14.185 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K19 completed all 1 loads
+2025-06-27 19:49:14.185 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K20 (load 1/3)
+2025-06-27 19:49:15.226 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K28 arrived with 4 loads. Queue size: 17
+2025-06-27 19:49:18.172 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K12 (remaining loads: 1)
+2025-06-27 19:49:18.173 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K8 (load 3/4)
+2025-06-27 19:49:20.172 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K13 (remaining loads: 1)
+2025-06-27 19:49:20.173 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K21 (load 1/4)
+2025-06-27 19:49:21.231 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K29 arrived with 3 loads. Queue size: 18
+2025-06-27 19:49:26.175 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K21 (remaining loads: 3)
+2025-06-27 19:49:26.176 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K9 (load 3/4)
+2025-06-27 19:49:28.190 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K20 (remaining loads: 2)
+2025-06-27 19:49:28.190 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K15 (load 2/4)
+2025-06-27 19:49:29.177 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K8 (remaining loads: 1)
+2025-06-27 19:49:29.177 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K22 (load 1/5)
+2025-06-27 19:49:29.236 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K30 arrived with 2 loads. Queue size: 19
+2025-06-27 19:49:34.239 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K31 arrived with 5 loads. Queue size: 20
+2025-06-27 19:49:37.180 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K9 (remaining loads: 1)
+2025-06-27 19:49:37.180 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K7 (load 4/4)
+2025-06-27 19:49:40.195 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K15 (remaining loads: 2)
+2025-06-27 19:49:40.196 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K23 (load 1/5)
+2025-06-27 19:49:41.181 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K22 (remaining loads: 4)
+2025-06-27 19:49:41.182 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K5 (load 4/5)
+2025-06-27 19:49:41.245 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K32 arrived with 1 loads. Queue size: 21
+2025-06-27 19:49:45.185 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K7 (remaining loads: 0)
+2025-06-27 19:49:45.187 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K7 completed all 4 loads
+2025-06-27 19:49:45.187 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K24 (load 1/2)
+2025-06-27 19:49:48.251 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K33 arrived with 2 loads. Queue size: 21
+2025-06-27 19:49:50.256 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K34 arrived with 2 loads. Queue size: 22
+2025-06-27 19:49:51.201 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K23 (remaining loads: 4)
+2025-06-27 19:49:51.202 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K11 (load 3/5)
+2025-06-27 19:49:51.262 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K35 arrived with 5 loads. Queue size: 23
+2025-06-27 19:49:53.183 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K5 (remaining loads: 1)
+2025-06-27 19:49:53.184 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K17 (load 2/5)
+2025-06-27 19:49:53.187 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K24 (remaining loads: 1)
+2025-06-27 19:49:53.187 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K25 (load 1/4)
+2025-06-27 19:49:55.266 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K36 arrived with 3 loads. Queue size: 24
+2025-06-27 19:49:57.207 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K11 (remaining loads: 2)
+2025-06-27 19:49:57.208 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K10 (load 3/4)
+2025-06-27 19:49:58.266 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K37 arrived with 3 loads. Queue size: 25
+2025-06-27 19:50:02.192 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K25 (remaining loads: 3)
+2025-06-27 19:50:02.193 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K26 (load 1/3)
+2025-06-27 19:50:03.189 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K17 (remaining loads: 3)
+2025-06-27 19:50:03.189 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K18 (load 2/3)
+2025-06-27 19:50:03.269 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K38 arrived with 1 loads. Queue size: 26
+2025-06-27 19:50:04.274 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K39 arrived with 3 loads. Queue size: 27
+2025-06-27 19:50:08.197 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K26 (remaining loads: 2)
+2025-06-27 19:50:08.197 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K27 (load 1/1)
+2025-06-27 19:50:08.211 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K10 (remaining loads: 1)
+2025-06-27 19:50:08.211 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K28 (load 1/4)
+2025-06-27 19:50:10.280 [pool-1-thread-1] INFO  c.t.service.LaundryService - Customer K40 arrived with 2 loads. Queue size: 28
+2025-06-27 19:50:10.280 [pool-1-thread-1] INFO  c.t.service.LaundryService - All 40 customers have arrived
+2025-06-27 19:50:12.194 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K18 (remaining loads: 1)
+2025-06-27 19:50:12.195 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K12 (load 3/3)
+2025-06-27 19:50:15.216 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K28 (remaining loads: 3)
+2025-06-27 19:50:15.217 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K13 (load 3/3)
+2025-06-27 19:50:16.199 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K27 (remaining loads: 0)
+2025-06-27 19:50:16.199 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K27 completed all 1 loads
+2025-06-27 19:50:16.200 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K29 (load 1/3)
+2025-06-27 19:50:19.196 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K12 (remaining loads: 0)
+2025-06-27 19:50:19.196 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K12 completed all 3 loads
+2025-06-27 19:50:19.196 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K21 (load 2/4)
+2025-06-27 19:50:26.204 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K29 (remaining loads: 2)
+2025-06-27 19:50:26.204 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K20 (load 2/3)
+2025-06-27 19:50:26.219 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K13 (remaining loads: 0)
+2025-06-27 19:50:26.220 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K13 completed all 3 loads
+2025-06-27 19:50:26.220 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K8 (load 4/4)
+2025-06-27 19:50:29.201 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K21 (remaining loads: 2)
+2025-06-27 19:50:29.202 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K30 (load 1/2)
+2025-06-27 19:50:35.222 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K8 (remaining loads: 0)
+2025-06-27 19:50:35.223 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K8 completed all 4 loads
+2025-06-27 19:50:35.223 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K31 (load 1/5)
+2025-06-27 19:50:39.208 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K20 (remaining loads: 1)
+2025-06-27 19:50:39.208 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K9 (load 4/4)
+2025-06-27 19:50:41.228 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K31 (remaining loads: 4)
+2025-06-27 19:50:41.229 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K15 (load 3/4)
+2025-06-27 19:50:44.207 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K30 (remaining loads: 1)
+2025-06-27 19:50:44.207 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K22 (load 2/5)
+2025-06-27 19:50:48.232 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K15 (remaining loads: 1)
+2025-06-27 19:50:48.233 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K32 (load 1/1)
+2025-06-27 19:50:51.410 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K22 (remaining loads: 3)
+2025-06-27 19:50:51.611 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K33 (load 1/2)
+2025-06-27 19:50:54.190 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K9 (remaining loads: 0)
+2025-06-27 19:50:54.229 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K9 completed all 4 loads
+2025-06-27 19:50:54.230 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K34 (load 1/2)
+2025-06-27 19:50:56.238 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K32 (remaining loads: 0)
+2025-06-27 19:50:56.238 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K32 completed all 1 loads
+2025-06-27 19:50:56.238 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K23 (load 2/5)
+2025-06-27 19:51:00.638 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K33 (remaining loads: 1)
+2025-06-27 19:51:00.640 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K35 (load 1/5)
+2025-06-27 19:51:02.235 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K34 (remaining loads: 1)
+2025-06-27 19:51:02.235 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K5 (load 5/5)
+2025-06-27 19:51:03.239 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K23 (remaining loads: 3)
+2025-06-27 19:51:03.240 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K24 (load 2/2)
+2025-06-27 19:51:08.239 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K5 (remaining loads: 0)
+2025-06-27 19:51:08.239 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K5 completed all 5 loads
+2025-06-27 19:51:08.239 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K36 (load 1/3)
+2025-06-27 19:51:11.243 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K24 (remaining loads: 0)
+2025-06-27 19:51:11.245 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K24 completed all 2 loads
+2025-06-27 19:51:11.245 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K11 (load 4/5)
+2025-06-27 19:51:14.643 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K35 (remaining loads: 4)
+2025-06-27 19:51:14.643 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K37 (load 1/3)
+2025-06-27 19:51:17.886 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K36 (remaining loads: 2)
+2025-06-27 19:51:17.906 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K25 (load 2/4)
+2025-06-27 19:51:22.920 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K25 (remaining loads: 2)
+2025-06-27 19:51:22.923 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K17 (load 3/5)
+2025-06-27 19:51:23.250 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K11 (remaining loads: 1)
+2025-06-27 19:51:23.250 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K38 (load 1/1)
+2025-06-27 19:51:24.648 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K37 (remaining loads: 2)
+2025-06-27 19:51:24.649 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K39 (load 1/3)
+2025-06-27 19:51:27.928 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K17 (remaining loads: 2)
+2025-06-27 19:51:27.929 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K26 (load 2/3)
+2025-06-27 19:51:37.255 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K38 (remaining loads: 0)
+2025-06-27 19:51:37.257 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K38 completed all 1 loads
+2025-06-27 19:51:37.257 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K10 (load 4/4)
+2025-06-27 19:51:37.654 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K39 (remaining loads: 2)
+2025-06-27 19:51:37.654 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K40 (load 1/2)
+2025-06-27 19:51:38.933 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K26 (remaining loads: 1)
+2025-06-27 19:51:38.934 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K18 (load 3/3)
+2025-06-27 19:51:50.262 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K10 (remaining loads: 0)
+2025-06-27 19:51:50.264 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K10 completed all 4 loads
+2025-06-27 19:51:50.264 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K28 (load 2/4)
+2025-06-27 19:51:50.935 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K18 (remaining loads: 0)
+2025-06-27 19:51:50.935 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K18 completed all 3 loads
+2025-06-27 19:51:50.936 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K29 (load 2/3)
+2025-06-27 19:51:52.658 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K40 (remaining loads: 1)
+2025-06-27 19:51:52.658 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K21 (load 3/4)
+2025-06-27 19:51:55.265 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K28 (remaining loads: 2)
+2025-06-27 19:51:55.266 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K20 (load 3/3)
+2025-06-27 19:51:59.941 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K29 (remaining loads: 1)
+2025-06-27 19:51:59.941 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K31 (load 2/5)
+2025-06-27 19:52:00.271 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K20 (remaining loads: 0)
+2025-06-27 19:52:00.272 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K20 completed all 3 loads
+2025-06-27 19:52:00.272 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K30 (load 2/2)
+2025-06-27 19:52:06.273 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K30 (remaining loads: 0)
+2025-06-27 19:52:06.275 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K30 completed all 2 loads
+2025-06-27 19:52:06.275 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K15 (load 4/4)
+2025-06-27 19:52:06.663 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K21 (remaining loads: 1)
+2025-06-27 19:52:06.664 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K22 (load 3/5)
+2025-06-27 19:52:09.944 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K31 (remaining loads: 3)
+2025-06-27 19:52:09.944 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K33 (load 2/2)
+2025-06-27 19:52:14.949 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K33 (remaining loads: 0)
+2025-06-27 19:52:14.950 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K33 completed all 2 loads
+2025-06-27 19:52:14.950 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K34 (load 2/2)
+2025-06-27 19:52:15.669 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K22 (remaining loads: 2)
+2025-06-27 19:52:15.670 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K23 (load 3/5)
+2025-06-27 19:52:16.281 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K15 (remaining loads: 0)
+2025-06-27 19:52:16.281 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K15 completed all 4 loads
+2025-06-27 19:52:16.282 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K35 (load 2/5)
+2025-06-27 19:52:22.675 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K23 (remaining loads: 2)
+2025-06-27 19:52:22.675 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K36 (load 2/3)
+2025-06-27 19:52:29.955 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K34 (remaining loads: 0)
+2025-06-27 19:52:29.956 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K34 completed all 2 loads
+2025-06-27 19:52:29.956 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K25 (load 3/4)
+2025-06-27 19:52:30.287 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K35 (remaining loads: 3)
+2025-06-27 19:52:30.287 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K11 (load 5/5)
+2025-06-27 19:52:33.684 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K36 (remaining loads: 1)
+2025-06-27 19:52:33.685 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K37 (load 2/3)
+2025-06-27 19:52:35.291 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K11 (remaining loads: 0)
+2025-06-27 19:52:35.292 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K11 completed all 5 loads
+2025-06-27 19:52:35.292 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K17 (load 4/5)
+2025-06-27 19:52:38.695 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K37 (remaining loads: 1)
+2025-06-27 19:52:38.695 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K39 (load 2/3)
+2025-06-27 19:52:42.967 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K25 (remaining loads: 1)
+2025-06-27 19:52:42.968 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K26 (load 3/3)
+2025-06-27 19:52:49.302 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K17 (remaining loads: 1)
+2025-06-27 19:52:49.303 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K40 (load 2/2)
+2025-06-27 19:52:50.705 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K39 (remaining loads: 1)
+2025-06-27 19:52:50.705 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K28 (load 3/4)
+2025-06-27 19:52:50.972 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K26 (remaining loads: 0)
+2025-06-27 19:52:50.972 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K26 completed all 3 loads
+2025-06-27 19:52:50.972 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K29 (load 3/3)
+2025-06-27 19:53:02.370 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K40 (remaining loads: 0)
+2025-06-27 19:53:02.370 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K40 completed all 2 loads
+2025-06-27 19:53:02.370 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K21 (load 4/4)
+2025-06-27 19:53:02.706 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K28 (remaining loads: 1)
+2025-06-27 19:53:02.707 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K31 (load 3/5)
+2025-06-27 19:53:04.982 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K29 (remaining loads: 0)
+2025-06-27 19:53:04.983 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K29 completed all 3 loads
+2025-06-27 19:53:04.984 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K22 (load 4/5)
+2025-06-27 19:53:11.380 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K21 (remaining loads: 0)
+2025-06-27 19:53:11.381 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K21 completed all 4 loads
+2025-06-27 19:53:11.381 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K23 (load 4/5)
+2025-06-27 19:53:11.989 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K22 (remaining loads: 1)
+2025-06-27 19:53:11.991 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K35 (load 3/5)
+2025-06-27 19:53:13.712 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K31 (remaining loads: 2)
+2025-06-27 19:53:13.712 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K36 (load 3/3)
+2025-06-27 19:53:24.386 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K23 (remaining loads: 1)
+2025-06-27 19:53:24.387 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K37 (load 3/3)
+2025-06-27 19:53:24.722 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K36 (remaining loads: 0)
+2025-06-27 19:53:24.723 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K36 completed all 3 loads
+2025-06-27 19:53:24.723 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K25 (load 4/4)
+2025-06-27 19:53:25.000 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K35 (remaining loads: 2)
+2025-06-27 19:53:25.000 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K17 (load 5/5)
+2025-06-27 19:53:32.730 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K25 (remaining loads: 0)
+2025-06-27 19:53:32.731 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K25 completed all 4 loads
+2025-06-27 19:53:32.731 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K39 (load 3/3)
+2025-06-27 19:53:33.396 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K37 (remaining loads: 0)
+2025-06-27 19:53:33.397 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K37 completed all 3 loads
+2025-06-27 19:53:33.397 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K28 (load 4/4)
+2025-06-27 19:53:37.005 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K17 (remaining loads: 0)
+2025-06-27 19:53:37.005 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K17 completed all 5 loads
+2025-06-27 19:53:37.005 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K22 (load 5/5)
+2025-06-27 19:53:43.741 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K39 (remaining loads: 0)
+2025-06-27 19:53:43.743 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K39 completed all 3 loads
+2025-06-27 19:53:43.744 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K31 (load 4/5)
+2025-06-27 19:53:48.402 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K28 (remaining loads: 0)
+2025-06-27 19:53:48.402 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K28 completed all 4 loads
+2025-06-27 19:53:48.403 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 started washing for customer K23 (load 5/5)
+2025-06-27 19:53:50.015 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K22 (remaining loads: 0)
+2025-06-27 19:53:50.015 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K22 completed all 5 loads
+2025-06-27 19:53:50.015 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K35 (load 4/5)
+2025-06-27 19:53:56.750 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K31 (remaining loads: 1)
+2025-06-27 19:53:56.750 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 started washing for customer K31 (load 5/5)
+2025-06-27 19:53:58.406 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished washing for customer K23 (remaining loads: 0)
+2025-06-27 19:53:58.407 [pool-1-thread-4] INFO  c.t.service.LaundryService - Customer K23 completed all 5 loads
+2025-06-27 19:54:00.026 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K35 (remaining loads: 1)
+2025-06-27 19:54:00.027 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 started washing for customer K35 (load 5/5)
+2025-06-27 19:54:02.760 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished washing for customer K31 (remaining loads: 0)
+2025-06-27 19:54:02.761 [pool-1-thread-2] INFO  c.t.service.LaundryService - Customer K31 completed all 5 loads
+2025-06-27 19:54:11.034 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished washing for customer K35 (remaining loads: 0)
+2025-06-27 19:54:11.035 [pool-1-thread-3] INFO  c.t.service.LaundryService - Customer K35 completed all 5 loads
+2025-06-27 19:54:11.040 [pool-1-thread-3] INFO  c.t.service.LaundryService - Machine 2 finished processing
+2025-06-27 19:54:11.080 [pool-1-thread-4] INFO  c.t.service.LaundryService - Machine 3 finished processing
+2025-06-27 19:54:11.823 [pool-1-thread-2] INFO  c.t.service.LaundryService - Machine 1 finished processing
+2025-06-27 19:54:11.831 [main] INFO  c.t.service.LaundryService - 
+=== SIMULATION STATISTICS for FixedThreadPool ===
+2025-06-27 19:54:11.831 [main] INFO  c.t.service.LaundryService - Total simulation time: 423 seconds
+2025-06-27 19:54:11.831 [main] INFO  c.t.service.LaundryService - Total customers served: 40
+2025-06-27 19:54:11.831 [main] INFO  c.t.service.LaundryService - Average wait time: {:.2f} seconds
+2025-06-27 19:54:11.832 [main] INFO  c.t.service.LaundryService - Average wash time: {:.2f} seconds
+2025-06-27 19:54:11.832 [main] INFO  c.t.service.LaundryService - Total washes completed: 122
+2025-06-27 19:54:11.832 [main] INFO  c.t.service.LaundryService - Machine utilization:
+2025-06-27 19:54:11.832 [main] INFO  c.t.service.LaundryService -   1: {:.2f}%
+2025-06-27 19:54:11.833 [main] INFO  c.t.service.LaundryService -   2: {:.2f}%
+2025-06-27 19:54:11.833 [main] INFO  c.t.service.LaundryService -   3: {:.2f}%
+2025-06-27 19:54:11.833 [main] INFO  c.t.service.LaundryService - === END STATISTICS ===
+
+2025-06-27 19:54:11.834 [main] INFO  c.t.service.LaundryService - 
+=== Testing with CachedThreadPool ===
+2025-06-27 19:54:11.834 [pool-2-thread-2] INFO  c.t.service.LaundryService - Machine 1 started processing
+2025-06-27 19:54:11.834 [pool-2-thread-3] INFO  c.t.service.LaundryService - Machine 2 started processing
+2025-06-27 19:54:11.834 [pool-2-thread-4] INFO  c.t.service.LaundryService - Machine 3 started processing
+2025-06-27 19:54:15.844 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K1 arrived with 2 loads. Queue size: 1
+2025-06-27 19:54:20.847 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K2 arrived with 4 loads. Queue size: 1
+2025-06-27 19:54:22.857 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K3 arrived with 1 loads. Queue size: 1
+2025-06-27 19:54:30.867 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K4 arrived with 1 loads. Queue size: 1
+2025-06-27 19:54:36.874 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K5 arrived with 2 loads. Queue size: 2
+2025-06-27 19:54:42.880 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K6 arrived with 2 loads. Queue size: 3
+2025-06-27 19:54:46.885 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K7 arrived with 2 loads. Queue size: 4
+2025-06-27 19:54:47.890 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K8 arrived with 3 loads. Queue size: 5
+2025-06-27 19:54:52.893 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K9 arrived with 1 loads. Queue size: 6
+2025-06-27 19:54:56.903 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K10 arrived with 4 loads. Queue size: 7
+2025-06-27 19:55:00.909 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K11 arrived with 3 loads. Queue size: 8
+2025-06-27 19:55:08.919 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K12 arrived with 2 loads. Queue size: 9
+2025-06-27 19:55:09.931 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K13 arrived with 1 loads. Queue size: 10
+2025-06-27 19:55:17.932 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K14 arrived with 4 loads. Queue size: 11
+2025-06-27 19:55:23.943 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K15 arrived with 5 loads. Queue size: 12
+2025-06-27 19:55:28.946 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K16 arrived with 4 loads. Queue size: 13
+2025-06-27 19:55:33.955 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K17 arrived with 1 loads. Queue size: 14
+2025-06-27 19:55:41.964 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K18 arrived with 2 loads. Queue size: 15
+2025-06-27 19:55:42.972 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K19 arrived with 3 loads. Queue size: 16
+2025-06-27 19:55:46.983 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K20 arrived with 4 loads. Queue size: 17
+2025-06-27 19:55:51.993 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K21 arrived with 3 loads. Queue size: 18
+2025-06-27 19:55:54.002 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K22 arrived with 2 loads. Queue size: 19
+2025-06-27 19:55:57.011 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K23 arrived with 2 loads. Queue size: 20
+2025-06-27 19:55:59.021 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K24 arrived with 5 loads. Queue size: 21
+2025-06-27 19:56:01.024 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K25 arrived with 5 loads. Queue size: 22
+2025-06-27 19:56:04.034 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K26 arrived with 3 loads. Queue size: 23
+2025-06-27 19:56:09.042 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K27 arrived with 3 loads. Queue size: 24
+2025-06-27 19:56:14.053 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K28 arrived with 3 loads. Queue size: 25
+2025-06-27 19:56:17.060 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K29 arrived with 3 loads. Queue size: 26
+2025-06-27 19:56:22.063 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K30 arrived with 3 loads. Queue size: 27
+2025-06-27 19:56:23.068 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K31 arrived with 3 loads. Queue size: 28
+2025-06-27 19:56:24.071 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K32 arrived with 2 loads. Queue size: 29
+2025-06-27 19:56:26.081 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K33 arrived with 2 loads. Queue size: 30
+2025-06-27 19:56:30.092 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K34 arrived with 2 loads. Queue size: 31
+2025-06-27 19:56:37.101 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K35 arrived with 5 loads. Queue size: 32
+2025-06-27 19:56:42.135 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K36 arrived with 2 loads. Queue size: 33
+2025-06-27 20:11:45.990 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K37 arrived with 3 loads. Queue size: 34
+2025-06-27 20:11:47.032 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K38 arrived with 1 loads. Queue size: 35
+2025-06-27 20:11:53.054 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K39 arrived with 5 loads. Queue size: 36
+2025-06-27 20:11:55.065 [pool-2-thread-1] INFO  c.t.service.LaundryService - Customer K40 arrived with 2 loads. Queue size: 37
+2025-06-27 20:11:55.065 [pool-2-thread-1] INFO  c.t.service.LaundryService - All 40 customers have arrived
