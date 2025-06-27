@@ -62,10 +62,8 @@ Ein Java Maven Projekt, das eine Waschsalon-Simulation mit dem Executor Framewor
 
 Der Waschsalon "Trommelwirbel" besitzt 3 Waschmaschinen und bedient 40 Kunden mit jeweils 1-5 Ladungen Wäsche. Die Simulation demonstriert:
 
-- **Executor Framework**: Verschiedene ExecutorService-Implementierungen
-- **Lock/Condition**: Thread-sichere Synchronisation für Waschmaschinen-Zugriff
-- **Lambda-Ausdrücke**: Kompakter, funktionaler Code
-- **Concurrent Programming**: Best Practices für nebenläufige Programmierung
+- Implement Executor
+- Besser implementation of queue: customer will do all there washes within 1 time and no need to reque after finishing each load
 
 ## Simulation Parameter
 
@@ -101,61 +99,3 @@ mvn exec:java
 mvn clean package
 java -jar target/laundromat-simulation-1.0.0.jar
 ```
-
-## Architektur
-
-### Klassen-Struktur
-- `Customer`: Repräsentiert einen Kunden mit Wäsche-Ladungen
-- `WashingMachine`: Waschmaschine mit Lock-Mechanismus
-- `LaundryService`: Haupt-Service mit Executor Framework
-- `LaundrySimulationMain`: Hauptklasse für die Simulation
-
-### Concurrency Features
-- **ReentrantLock**: Für Waschmaschinen-Zugriff
-- **Condition**: Für Queue-Signaling
-- **CompletableFuture**: Für asynchrone Task-Verwaltung
-- **AtomicInteger**: Für thread-sichere Zähler
-- **Collections.synchronizedList**: Für thread-sichere Listen
-
-### Lambda-Ausdrücke Verwendung
-- Stream-basierte Statistik-Berechnung
-- Funktionale Queue-Verarbeitung
-- CompletableFuture mit Lambda-Tasks
-- Collector-basierte Datenverarbeitung
-
-## Logging und Statistiken
-
-Die Simulation protokolliert detaillierte Statistiken:
-- Gesamte Simulationszeit
-- Durchschnittliche Wartezeit
-- Durchschnittliche Waschzeit
-- Maschinen-Auslastung
-- Anzahl verarbeiteter Kunden
-
-Logs werden sowohl in der Konsole als auch in `trommelwirbel-simulation.log` gespeichert.
-
-## Performance Vergleich
-
-Die Simulation testet verschiedene ExecutorService-Implementierungen und vergleicht:
-- Thread-Erstellung und -Verwaltung
-- Durchsatz und Latenz
-- Ressourcen-Nutzung
-- Skalierbarkeit
-
-## Entwicklung
-
-### Code-Qualität
-- Clean Code Prinzipien
-- SOLID Design Patterns  
-- Comprehensive Error Handling
-- Unit Tests mit JUnit 5
-
-### Threading Best Practices
-- Vermeidung von Race Conditions
-- Proper Resource Management
-- Deadlock Prevention
-- Graceful Shutdown
-
-## Lizenz
-
-Dieses Projekt dient zu Bildungszwecken und demonstriert moderne Java Concurrency-Konzepte.

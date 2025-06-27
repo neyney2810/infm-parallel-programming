@@ -8,6 +8,7 @@
 
     <appender name="FILE" class="ch.qos.logback.core.FileAppender">
         <file>trommelwirbel-simulation.log</file>
+        <append>false</append> <!-- Set append to false to overwrite the log file -->
         <encoder>
             <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
         </encoder>

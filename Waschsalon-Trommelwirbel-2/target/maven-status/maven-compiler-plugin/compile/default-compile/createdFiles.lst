@@ -1,4 +1,4 @@
-com/trommelwirbel/model/Customer.class
-com/trommelwirbel/LaundrySimulationMain.class
-com/trommelwirbel/service/LaundryService.class
-com/trommelwirbel/model/WashingMachine.class
+com/trommelwirbel/WashingMachine.class
+com/trommelwirbel/Customer.class
+com/trommelwirbel/App.class
+com/trommelwirbel/WashingSalon.class

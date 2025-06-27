@@ -1,7 +1,5 @@
-package com.trommelwirbel.service;
+package com.trommelwirbel;
 
-import com.trommelwirbel.model.Customer;
-import com.trommelwirbel.model.WashingMachine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,8 +11,8 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.util.stream.Collectors;
 
-public class LaundryService {
-    private static final Logger logger = LoggerFactory.getLogger(LaundryService.class);
+public class WashingSalon {
+    private static final Logger logger = LoggerFactory.getLogger(WashingSalon.class);
 
     private final List<WashingMachine> washingMachines;
     private final Queue<Customer> waitingQueue;
@@ -24,31 +22,26 @@ public class LaundryService {
     private final Random random;
 
     // Statistics
-    public LaundryService() {
-        this.washingMachines = createWashingMachines();
+    public WashingSalon() {
+        this.washingMachines = List.of(
+                new WashingMachine(1),
+                new WashingMachine(2),
+                new WashingMachine(3));
         this.waitingQueue = new LinkedList<>();
         this.completedCustomers = Collections.synchronizedList(new ArrayList<>());
         this.queueLock = new ReentrantLock();
         this.machineAvailable = queueLock.newCondition();
         this.random = new Random();
 
-        logger.info("Trommelwirbel Laundromat initialized with {} washing machines", washingMachines.size());
-    }
-
-    private List<WashingMachine> createWashingMachines() {
-        return List.of(
-                new WashingMachine(1),
-                new WashingMachine(2),
-                new WashingMachine(3));
+        logger.info("Trommelwirbel initialized with {} washing machines", washingMachines.size());
     }
 
     public void runSimulation() {
-        logger.info("Starting Trommelwirbel Laundromat Simulation");
+        logger.info("Starting Simulation");
 
         // Test different ExecutorService implementations
         testWithExecutorService("FixedThreadPool", Executors.newFixedThreadPool(5));
         testWithExecutorService("CachedThreadPool", Executors.newCachedThreadPool());
-        testWithExecutorService("SingleThreadExecutor", Executors.newSingleThreadExecutor());
     }
 
     private void testWithExecutorService(String executorType, ExecutorService executorService) {
@@ -70,10 +63,8 @@ public class LaundryService {
             // Wait for customer arrivals to finish
             customerArrivalTask.get();
 
-            // Wait for all customers to be processed
             waitForAllCustomersToComplete();
 
-            // Wait for all machine tasks to complete
             CompletableFuture.allOf(machineProcessingTasks.toArray(new CompletableFuture[0]))
                     .get(5, TimeUnit.SECONDS);
 
@@ -111,8 +102,10 @@ public class LaundryService {
                 try {
                     waitingQueue.offer(customer);
                     machineAvailable.signalAll();
-                    logger.info("Customer {} arrived with {} loads. Queue size: {}",
-                            customer.getName(), loads, waitingQueue.size());
+                    logger.info("Customer {} arrived with {} loads. Queue: [{}]",
+                            customer.getName(), loads, waitingQueue.stream()
+                                    .map(Customer::getName)
+                                    .collect(Collectors.joining(", ")));
                 } finally {
                     queueLock.unlock();
                 }
@@ -134,14 +127,12 @@ public class LaundryService {
             try {
                 Customer customer = getNextCustomerForMachine();
                 if (customer == null) {
-                    // Check if simulation should end
                     if (shouldEndSimulation()) {
                         break;
                     }
                     continue;
                 }
 
-                // Process one wash load using lambda for cleaner code
                 processWashLoad(machine, customer);
 
             } catch (InterruptedException e) {
@@ -169,34 +160,11 @@ public class LaundryService {
     private void processWashLoad(WashingMachine machine, Customer customer) throws InterruptedException {
         machine.getLock().lock();
         try {
-            // Start wash
-            machine.startWash(customer);
-            logger.info("Machine {} started washing for customer {} (load {}/{})",
-                    machine.getMachineId(), customer.getName(),
-                    customer.getTotalLoads() - customer.getRemainingLoads() + 1, customer.getTotalLoads());
-
-            // Random wash duration between 5-15 seconds
-            int washDurationSeconds = random.nextInt(11) + 5;
-
-            // Simulate washing (outside of machine lock to allow other operations)
-            machine.getLock().unlock();
-            Thread.sleep(washDurationSeconds * 1000);
-            machine.getLock().lock();
-
-            // Finish wash
-            machine.finishWash(washDurationSeconds);
-            customer.decrementRemainingLoads();
-
-            logger.info("Machine {} finished washing for customer {} (remaining loads: {})",
-                    machine.getMachineId(), customer.getName(), customer.getRemainingLoads());
-
-            // Handle customer completion or re-queuing using lambda expressions
+            machine.processWashing(customer);
             handleCustomerAfterWash(customer);
 
         } finally {
-            if (machine.getLock().tryLock()) {
-                machine.getLock().unlock();
-            }
+            machine.getLock().unlock();
         }
     }
 

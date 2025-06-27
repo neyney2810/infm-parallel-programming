@@ -1,6 +1,5 @@
 package com.trommelwirbel;
 
-import com.trommelwirbel.service.LaundryService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,8 +12,8 @@ public class App {
         logger.info("with 40 customers, 3 washing machines, and concurrent processing.");
 
         try {
-            LaundryService laundryService = new LaundryService();
-            laundryService.runSimulation();
+            WashingSalon washingSalon = new WashingSalon();
+            washingSalon.runSimulation();
 
             logger.info("Simulation completed successfully!");
 
